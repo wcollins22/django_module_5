@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles.css" %}"/>
+    <title>Hello!</title>
+</head>
+<body>
+    <form action="{% url 'ls' %}">
+
+        <label>
+            <p>A</p>
+            <input type="text" name="a">
+        </label>
+
+        <label>
+            <p>B</p>
+            <input type="text" name="b">
+        </label>
+
+        <label>
+            <p>c</p>
+            <input type="text" name="c">
+        </label>
+
+         <button>Press</button>
+    </form>
+
+    <p>{{result}}</p>
+
+    
+</body>
+</html>

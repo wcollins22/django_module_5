@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <form action="{% url 'nh'%}" method="GET">
+      <p>Near Hundred Form</p>
+      <label>
+        <p>number:</p>
+        <input type="number" name="number" />
+      </label>
+      <button>CALCULATE!</button>
+    </form>
+    {%if number <= 110 and number >= 90%}
+    <p>That number is close to 100</p>
+    {%elif number >= 190 and number <= 210 %}
+    <p>That number is close to 200</p>
+    {%else%}
+    <p>That number is not close to 100 or 200</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles.css" %}"/>
+    <title>Hello!</title>
+</head>
+<body>
+    <form action="{% url 'age' %}" method="GET">
+
+        <label>
+            <p>Birthday:</p>
+            <input type="number" name="year">
+        </label>
+         <button>Press</button>
+    </form>
+
+    {% if answer is not None %}
+        <p>{{answer}}</p>
+    {% endif %}
+    
+</body>
+</html>
+
+
